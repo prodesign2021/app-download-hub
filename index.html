@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>应用下载站 · 开源应用一键下载</title>
+  <meta name="description" content="精选开源桌面与移动应用，按平台筛选，下载直连 GitHub Releases，无广告、无捆绑。" />
+  <meta property="og:title" content="应用下载站 · 开源应用一键下载" />
+  <meta property="og:description" content="精选开源桌面与移动应用，下载直连 GitHub Releases。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f8cff'/%3E%3Cpath d='M16 8v11m0 0 4.2-4.2M16 19l-4.2-4.2M10 23h12' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="应用下载站首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M16 8v11m0 0 4.2-4.2M16 19l-4.2-4.2M10 23h12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+        <span class="brand-text">
+          <strong>应用下载站</strong>
+          <small data-repo-label>App Hub</small>
+        </span>
+      </a>
+
+      <nav class="header-actions">
+        <a class="ghost-link" data-repo-link href="#" target="_blank" rel="noopener">GitHub 仓库</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换深色 / 浅色主题" title="切换主题">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2 7 7M17 17l1.8 1.8M18.8 5.2 17 7M7 17l-1.8 1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.6 8.6 0 1 0 10.4 10.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>开源应用，一处下载</h1>
+        <p class="hero-sub">精选跨平台开源软件，安装包直连 GitHub Releases —— 无广告、无捆绑、版本可追溯。</p>
+
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="6.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="search" type="search" placeholder="搜索应用名称或用途，例如：截图、Markdown、下载工具" aria-label="搜索应用" autocomplete="off" />
+          <kbd class="hint-key">/</kbd>
+        </div>
+
+        <dl class="stats" id="stats">
+          <div><dt>应用</dt><dd id="stat-apps">—</dd></div>
+          <div><dt>平台</dt><dd id="stat-platforms">—</dd></div>
+          <div><dt>最近更新</dt><dd id="stat-updated">—</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="toolbar">
+        <div class="chip-group" id="category-filter" role="group" aria-label="按分类筛选">
+          <button type="button" class="chip is-active" data-category="all">全部</button>
+        </div>
+        <div class="chip-group" id="platform-filter" role="group" aria-label="按平台筛选">
+          <button type="button" class="chip is-active" data-platform="all">所有平台</button>
+          <button type="button" class="chip" data-platform="windows">Windows</button>
+          <button type="button" class="chip" data-platform="macos">macOS</button>
+          <button type="button" class="chip" data-platform="linux">Linux</button>
+          <button type="button" class="chip" data-platform="android">Android</button>
+        </div>
+      </div>
+
+      <div id="notice" class="notice" hidden></div>
+
+      <div id="grid" class="grid" aria-live="polite"></div>
+
+      <div id="empty" class="empty" hidden>
+        <p class="empty-title">没有匹配的应用</p>
+        <p class="empty-sub">换个关键词，或点「全部」清除筛选。</p>
+        <button type="button" class="btn-secondary" id="reset-filter">清除筛选</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>
+        下载由 <a data-repo-link href="#" target="_blank" rel="noopener">GitHub Releases</a> 提供，安装包版权归各项目作者所有。
+      </p>
+      <p class="footer-note">版本信息通过 GitHub API 实时解析，若遇到限流会回退到发布页链接。</p>
+    </div>
+  </footer>
+
+  <template id="card-skeleton">
+    <article class="card skeleton">
+      <div class="card-head"><span class="icon-tile"></span><span class="sk-line w60"></span></div>
+      <div class="sk-line w90"></div>
+      <div class="sk-line w70"></div>
+      <div class="sk-buttons"><span></span><span></span></div>
+    </article>
+  </template>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

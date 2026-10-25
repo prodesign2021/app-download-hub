@@ -1,0 +1,15 @@
+{
+  "name": "app-download-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "开源应用下载站：静态站点 + GitHub Releases 下载源",
+  "scripts": {
+    "dev": "python3 -m http.server 4321",
+    "check": "node --check assets/app.js && node scripts/check-data.mjs && node --check scripts/publish.mjs",
+    "publish": "node scripts/publish.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

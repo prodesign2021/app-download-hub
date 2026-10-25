@@ -1,0 +1,146 @@
+{
+  "owner": "prodesign2021",
+  "repo": "app-download-hub",
+  "updated": "2026-10-26",
+  "apps": [
+    {
+      "id": "harness-demo",
+      "name": "Harness Demo",
+      "tagline": "示例应用 · 验证自有发布链路",
+      "description": "本站的示例应用。安装包由仓库自带的 publish.mjs 上传到 GitHub Releases，用来验证「发布 → 清单更新 → 下载可用」的完整闭环。",
+      "category": "示例",
+      "repo": "prodesign2021/app-download-hub",
+      "icon": "🧪",
+      "accent": "#4f8cff",
+      "featured": true,
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "\\.windows\\.zip$" },
+        { "platform": "macos", "label": "macOS", "match": "\\.macos\\.zip$" }
+      ]
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim",
+      "tagline": "可扩展的终端编辑器",
+      "description": "Vim 的现代重构版，内置 LSP、Treesitter 与 Lua 配置，启动极快，远程开发与服务器运维的常用主力编辑器。",
+      "category": "开发工具",
+      "repo": "neovim/neovim",
+      "icon": "🟩",
+      "accent": "#57a143",
+      "featured": true,
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^nvim-win64\\.zip$" },
+        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^nvim-macos-arm64\\.tar\\.gz$" },
+        { "platform": "macos", "label": "macOS Intel", "match": "^nvim-macos-x86_64\\.tar\\.gz$" },
+        { "platform": "linux", "label": "Linux x86_64", "match": "^nvim-linux-x86_64\\.tar\\.gz$" }
+      ]
+    },
+    {
+      "id": "gh-cli",
+      "name": "GitHub CLI",
+      "tagline": "在终端里操作 GitHub",
+      "description": "官方命令行工具：创建仓库、提 PR、跑 Actions、发 Release，一条命令搞定，脚本化 CI 流程的必备品。",
+      "category": "开发工具",
+      "repo": "cli/cli",
+      "icon": "🐙",
+      "accent": "#24292f",
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^gh_[\\d.]+_windows_amd64\\.msi$" },
+        { "platform": "macos", "label": "macOS Universal", "match": "^gh_[\\d.]+_macOS_universal\\.pkg$" },
+        { "platform": "linux", "label": "Linux deb", "match": "^gh_[\\d.]+_linux_amd64\\.deb$" }
+      ]
+    },
+    {
+      "id": "git-for-windows",
+      "name": "Git for Windows",
+      "tagline": "Windows 上的 Git",
+      "description": "Windows 平台官方 Git 发行版，自带 Git Bash、OpenSSH 与凭据管理器，装完即可 clone / push。",
+      "category": "开发工具",
+      "repo": "git-for-windows/git",
+      "icon": "🌿",
+      "accent": "#f05033",
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^Git-[\\d.]+-64-bit\\.exe$" }
+      ]
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "tagline": "开源录屏与直播",
+      "description": "免费开源的音视频录制与直播软件，支持多场景切换、硬件编码与虚拟摄像头，教程录制和会议直播的首选。",
+      "category": "媒体",
+      "repo": "obsproject/obs-studio",
+      "icon": "🎬",
+      "accent": "#302e31",
+      "featured": true,
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^OBS-Studio-[\\d.]+-Windows-x64-Installer\\.exe$" },
+        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^OBS-Studio-[\\d.]+-macOS-Apple\\.dmg$" },
+        { "platform": "macos", "label": "macOS Intel", "match": "^OBS-Studio-[\\d.]+-macOS-Intel\\.dmg$" },
+        { "platform": "linux", "label": "Ubuntu deb", "match": "^OBS-Studio-[\\d.]+-Ubuntu-[\\d.]+-x86_64\\.deb$" }
+      ]
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "tagline": "本地优先的 Markdown 笔记",
+      "description": "基于本地 Markdown 文件的知识库，双向链接与图谱视图，插件生态丰富，数据完全掌握在自己手里。",
+      "category": "效率",
+      "repo": "obsidianmd/obsidian-releases",
+      "icon": "📘",
+      "accent": "#7c3aed",
+      "downloads": [
+        { "platform": "windows", "label": "Windows 安装包", "match": "^Obsidian-[\\d.]+\\.exe$" },
+        { "platform": "macos", "label": "macOS 通用", "match": "^Obsidian-[\\d.]+\\.dmg$" },
+        { "platform": "linux", "label": "Linux AppImage", "match": "^Obsidian-[\\d.]+\\.AppImage$" },
+        { "platform": "linux", "label": "Linux deb", "match": "^obsidian_[\\d.]+_amd64\\.deb$" }
+      ]
+    },
+    {
+      "id": "localsend",
+      "name": "LocalSend",
+      "tagline": "局域网跨设备传文件",
+      "description": "不经过服务器，同一 WiFi 下手机与电脑互传文件，开源免费无广告，跨平台替代 AirDrop 的方案。",
+      "category": "工具",
+      "repo": "localsend/localsend",
+      "icon": "📡",
+      "accent": "#0ea5e9",
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^LocalSend-[\\d.]+-windows-x86-64\\.exe$" },
+        { "platform": "macos", "label": "macOS", "match": "^LocalSend-[\\d.]+\\.dmg$" },
+        { "platform": "android", "label": "Android arm64", "match": "^LocalSend-[\\d.]+-android-arm64v8\\.apk$" },
+        { "platform": "linux", "label": "Linux AppImage", "match": "^LocalSend-[\\d.]+-linux-x86-64\\.AppImage$" }
+      ]
+    },
+    {
+      "id": "motrix",
+      "name": "Motrix",
+      "tagline": "全功能下载管理器",
+      "description": "支持 HTTP / BT / 磁力链接的下载器，多线程加速、断点续传，界面干净，长期位居开源下载工具榜单。",
+      "category": "工具",
+      "repo": "agalwood/Motrix",
+      "icon": "⬇️",
+      "accent": "#f59e0b",
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^Motrix-Setup-[\\d.]+\\.exe$" },
+        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^Motrix-[\\d.]+-arm64\\.dmg$" },
+        { "platform": "macos", "label": "macOS Intel", "match": "^Motrix-[\\d.]+-x64\\.dmg$" },
+        { "platform": "linux", "label": "Linux AppImage", "match": "^Motrix-[\\d.]+-x86_64\\.AppImage$" }
+      ]
+    },
+    {
+      "id": "powertoys",
+      "name": "PowerToys",
+      "tagline": "微软出品 Windows 增强工具集",
+      "description": "窗口分屏、批量重命名、取色器、快捷启动等 20 多个小工具合集，把 Windows 效率补齐到接近 macOS。",
+      "category": "系统工具",
+      "repo": "microsoft/PowerToys",
+      "icon": "🛠️",
+      "accent": "#0f6cbd",
+      "downloads": [
+        { "platform": "windows", "label": "Windows x64", "match": "^PowerToysSetup-[\\d.]+-x64\\.exe$" },
+        { "platform": "windows", "label": "Windows ARM64", "match": "^PowerToysSetup-[\\d.]+-arm64\\.exe$" }
+      ]
+    }
+  ]
+}
