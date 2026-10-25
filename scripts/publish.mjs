@@ -13,7 +13,7 @@
  */
 
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 
@@ -80,7 +80,16 @@ function tryRun(cmd, cmdArgs) {
 }
 
 function todayISO() {
-  return new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+}
+
+function humanSize(bytes) {
+  if (bytes >= 1024 * 1024 * 1024) return `${(bytes / 1024 ** 3).toFixed(2)} GB`;
+  if (bytes >= 1024 * 1024) return `${(bytes / 1024 ** 2).toFixed(2)} MB`;
+  if (bytes >= 1024) return `${(bytes / 1024).toFixed(1)} kB`;
+  return `${bytes} B`;
 }
 
 function main() {
@@ -149,8 +158,7 @@ function main() {
 
     console.log('\n▸ 发布结果：');
     for (const asset of assets) {
-      const size = (asset.size / 1024 / 1024).toFixed(2);
-      console.log(`   ✓ ${asset.name}  (${size} MB)`);
+      console.log(`   ✓ ${asset.name}  (${humanSize(asset.size)})`);
     }
 
     // 校验清单里的 match 正则是否都能命中真实资产，提前发现配置漂移
