@@ -1,7 +1,7 @@
 {
   "owner": "prodesign2021",
   "repo": "app-download-hub",
-  "updated": "2026-10-26",
+  "updated": "2026-10-25",
   "apps": [
     {
       "id": "harness-demo",
@@ -14,9 +14,20 @@
       "accent": "#4f8cff",
       "featured": true,
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "\\.windows\\.zip$" },
-        { "platform": "macos", "label": "macOS", "match": "\\.macos\\.zip$" }
-      ]
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "\\.windows\\.zip$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS",
+          "match": "\\.macos\\.zip$"
+        }
+      ],
+      "version": "0.1.0",
+      "updated": "2026-10-25",
+      "releaseUrl": "https://github.com/prodesign2021/app-download-hub/releases/tag/v0.1.0"
     },
     {
       "id": "neovim",
@@ -29,10 +40,26 @@
       "accent": "#57a143",
       "featured": true,
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^nvim-win64\\.zip$" },
-        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^nvim-macos-arm64\\.tar\\.gz$" },
-        { "platform": "macos", "label": "macOS Intel", "match": "^nvim-macos-x86_64\\.tar\\.gz$" },
-        { "platform": "linux", "label": "Linux x86_64", "match": "^nvim-linux-x86_64\\.tar\\.gz$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^nvim-win64\\.zip$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Apple Silicon",
+          "match": "^nvim-macos-arm64\\.tar\\.gz$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Intel",
+          "match": "^nvim-macos-x86_64\\.tar\\.gz$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux x86_64",
+          "match": "^nvim-linux-x86_64\\.tar\\.gz$"
+        }
       ]
     },
     {
@@ -45,9 +72,21 @@
       "icon": "🐙",
       "accent": "#24292f",
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^gh_[\\d.]+_windows_amd64\\.msi$" },
-        { "platform": "macos", "label": "macOS Universal", "match": "^gh_[\\d.]+_macOS_universal\\.pkg$" },
-        { "platform": "linux", "label": "Linux deb", "match": "^gh_[\\d.]+_linux_amd64\\.deb$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^gh_[\\d.]+_windows_amd64\\.msi$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Universal",
+          "match": "^gh_[\\d.]+_macOS_universal\\.pkg$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux deb",
+          "match": "^gh_[\\d.]+_linux_amd64\\.deb$"
+        }
       ]
     },
     {
@@ -60,7 +99,11 @@
       "icon": "🌿",
       "accent": "#f05033",
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^Git-[\\d.]+-64-bit\\.exe$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^Git-[\\d.]+-64-bit\\.exe$"
+        }
       ]
     },
     {
@@ -74,10 +117,26 @@
       "accent": "#302e31",
       "featured": true,
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^OBS-Studio-[\\d.]+-Windows-x64-Installer\\.exe$" },
-        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^OBS-Studio-[\\d.]+-macOS-Apple\\.dmg$" },
-        { "platform": "macos", "label": "macOS Intel", "match": "^OBS-Studio-[\\d.]+-macOS-Intel\\.dmg$" },
-        { "platform": "linux", "label": "Ubuntu deb", "match": "^OBS-Studio-[\\d.]+-Ubuntu-[\\d.]+-x86_64\\.deb$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^OBS-Studio-[\\d.]+-Windows-x64-Installer\\.exe$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Apple Silicon",
+          "match": "^OBS-Studio-[\\d.]+-macOS-Apple\\.dmg$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Intel",
+          "match": "^OBS-Studio-[\\d.]+-macOS-Intel\\.dmg$"
+        },
+        {
+          "platform": "linux",
+          "label": "Ubuntu deb",
+          "match": "^OBS-Studio-[\\d.]+-Ubuntu-[\\d.]+-x86_64\\.deb$"
+        }
       ]
     },
     {
@@ -90,10 +149,26 @@
       "icon": "📘",
       "accent": "#7c3aed",
       "downloads": [
-        { "platform": "windows", "label": "Windows 安装包", "match": "^Obsidian-[\\d.]+\\.exe$" },
-        { "platform": "macos", "label": "macOS 通用", "match": "^Obsidian-[\\d.]+\\.dmg$" },
-        { "platform": "linux", "label": "Linux AppImage", "match": "^Obsidian-[\\d.]+\\.AppImage$" },
-        { "platform": "linux", "label": "Linux deb", "match": "^obsidian_[\\d.]+_amd64\\.deb$" }
+        {
+          "platform": "windows",
+          "label": "Windows 安装包",
+          "match": "^Obsidian-[\\d.]+\\.exe$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS 通用",
+          "match": "^Obsidian-[\\d.]+\\.dmg$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux AppImage",
+          "match": "^Obsidian-[\\d.]+\\.AppImage$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux deb",
+          "match": "^obsidian_[\\d.]+_amd64\\.deb$"
+        }
       ]
     },
     {
@@ -106,10 +181,26 @@
       "icon": "📡",
       "accent": "#0ea5e9",
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^LocalSend-[\\d.]+-windows-x86-64\\.exe$" },
-        { "platform": "macos", "label": "macOS", "match": "^LocalSend-[\\d.]+\\.dmg$" },
-        { "platform": "android", "label": "Android arm64", "match": "^LocalSend-[\\d.]+-android-arm64v8\\.apk$" },
-        { "platform": "linux", "label": "Linux AppImage", "match": "^LocalSend-[\\d.]+-linux-x86-64\\.AppImage$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^LocalSend-[\\d.]+-windows-x86-64\\.exe$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS",
+          "match": "^LocalSend-[\\d.]+\\.dmg$"
+        },
+        {
+          "platform": "android",
+          "label": "Android arm64",
+          "match": "^LocalSend-[\\d.]+-android-arm64v8\\.apk$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux AppImage",
+          "match": "^LocalSend-[\\d.]+-linux-x86-64\\.AppImage$"
+        }
       ]
     },
     {
@@ -122,10 +213,26 @@
       "icon": "⬇️",
       "accent": "#f59e0b",
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^Motrix-Setup-[\\d.]+\\.exe$" },
-        { "platform": "macos", "label": "macOS Apple Silicon", "match": "^Motrix-[\\d.]+-arm64\\.dmg$" },
-        { "platform": "macos", "label": "macOS Intel", "match": "^Motrix-[\\d.]+-x64\\.dmg$" },
-        { "platform": "linux", "label": "Linux AppImage", "match": "^Motrix-[\\d.]+-x86_64\\.AppImage$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^Motrix-Setup-[\\d.]+\\.exe$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Apple Silicon",
+          "match": "^Motrix-[\\d.]+-arm64\\.dmg$"
+        },
+        {
+          "platform": "macos",
+          "label": "macOS Intel",
+          "match": "^Motrix-[\\d.]+-x64\\.dmg$"
+        },
+        {
+          "platform": "linux",
+          "label": "Linux AppImage",
+          "match": "^Motrix-[\\d.]+-x86_64\\.AppImage$"
+        }
       ]
     },
     {
@@ -138,8 +245,16 @@
       "icon": "🛠️",
       "accent": "#0f6cbd",
       "downloads": [
-        { "platform": "windows", "label": "Windows x64", "match": "^PowerToysSetup-[\\d.]+-x64\\.exe$" },
-        { "platform": "windows", "label": "Windows ARM64", "match": "^PowerToysSetup-[\\d.]+-arm64\\.exe$" }
+        {
+          "platform": "windows",
+          "label": "Windows x64",
+          "match": "^PowerToysSetup-[\\d.]+-x64\\.exe$"
+        },
+        {
+          "platform": "windows",
+          "label": "Windows ARM64",
+          "match": "^PowerToysSetup-[\\d.]+-arm64\\.exe$"
+        }
       ]
     }
   ]
